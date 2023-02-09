@@ -1,0 +1,15 @@
+package Exeptions;
+
+import objects.Gast;
+
+public class GastNotCheckedInExeption extends Throwable {
+    private Gast gast;
+
+    public GastNotCheckedInExeption(Gast gast) {
+        this.gast = gast;
+    }
+
+    public String getMessage() {
+        return gast.getVorname() + " " + gast.getNachname() + " ist nicht eingechecked bitte überprüfe ob du vielleicht einen Tippfehler hattest";
+    }
+}
